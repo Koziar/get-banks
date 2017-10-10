@@ -46,7 +46,7 @@ public class GetBanks {
                     throws IOException {
                 message = new String(body, "UTF-8");
                 System.out.println(" [x] Received '" + message + "'");
-
+                // This is a major hack we should create an object and then get an array of banks from that
                 String[] arr = message.split(",");
 
                 String banks = getBanks(arr[0], Integer.parseInt(arr[1]), Double.parseDouble(arr[2]), Integer.parseInt(arr[3]));
